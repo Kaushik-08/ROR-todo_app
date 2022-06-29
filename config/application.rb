@@ -1,10 +1,13 @@
 require_relative "boot"
 
 require "rails/all"
+require "Dotenv"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
+
+Dotenv::Railtie.load
 
 module TodoApp
   class Application < Rails::Application
